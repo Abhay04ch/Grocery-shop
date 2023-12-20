@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins&family=Raleway&display=swap');
+
+:root{
+    --primarycolor: rgb(209, 216, 105);
+}
+
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    overflow:auto;
+}
+.navbar{
+    background-color: rgb(209, 216, 105);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 10px;
+}
+
+#check-box{
+    display: none;
+}
+
+.menu{
+    display: none;
+}
+
+.logo{
+    height: 30px;
+    width: 30px;
+    display: flex;
+    align-items: center;
+
+}
+
+nav ul{
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+nav ul li{
+    display: inline-block;
+    padding: 10px 10px;
+}
+nav ul li a{
+    text-decoration: none;
+    color:black;
+}
+
+.icons{
+    display: flex;
+    align-items: center;
+}
+
+.icons span{
+    cursor: pointer;
+    padding: 5px;
+
+}
+
+.banner{
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+    padding: 50px 40px;
+}
+.bannertext{
+    flex:1;
+}
+.bannertext h2{
+    font-size: 1.5rem;
+}
+.bannertext p{
+    font-size: 0.9rem;
+    padding: 10px 0px;
+
+}
+
+.bannertext a{
+    text-decoration: none;
+    color: darkblue;
+    background-color: rgb(224, 230, 147);
+    padding: 10px;
+    display:inline-block;
+    border: 2px solid rgb(79, 128, 6);
+    border-radius: 8px;
+    transition: all 0.5s;
+}
+
+.bannertext a:hover{
+    background-color: yellow;
+    color: BLACK;
+    border: 2px solid rgb(89, green, blue)
+}
+.bannerimage{
+    flex:1; 
+}
+.bannerimage img{
+    width: 100%;
+
+}
+
+.featured{
+    padding: 20px 40px;
+    color: var(--primarycolor);
+}
+
+.featured h2{
+    text-align: center;
+    padding-bottom: 30px;
+    font-size: 2.0rem;
+}
+
+.cards{
+    display: grid;
+    /* grid-template-columns: repeat(6, 1fr); */
+    padding: 0px 30px 10px 30px;
+    justify-items: center;
+    gap: 0.5em;
+
+}
+
+.card{
+    /* width: 220px; */
+    border: 3px solid green;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+   
+    /* overflow:none; */
+   
+
+}
+.cardImg img{
+    width: 200px;
+    height: 200px;
+    display: block;
+    margin: auto;
+    
+}
+.card h4{
+    color: black;
+    /* padding: auto; */
+
+}
+.card p{
+    padding: 5px 0px;
+}
+.card a{
+    text-decoration: none;
+    color: darkblue;
+    background-color: rgb(224, 230, 147);
+    padding: 10px;
+    display:inline-block;
+    border: 2px solid rgb(79, 128, 6);
+    border-radius: 8px;
+    transition: all 0.5s
+}
+.card a:hover{
+    background-color: yellow;
+    color: black;
+    border: 2px solid rgb(16, 49, 33);
+}
+
+@media only screen and (max-width: 500px){
+    html{
+        font-size: 16px;
+    }
+    
+    #check-box:checked ~ ul{
+        left: 0;
+    }
+    .menu{
+        display: block;
+        cursor: pointer;
+    }
+    nav ul{
+        /* display: none; */
+        position: fixed;
+        top: 50px;
+        width: 30%;
+        left: 100%;
+        background-color: rgb(65, 65, 45);
+        flex-direction: column;
+        transition: all 0.5s ease-in ;
+
+    }
+    .banner{
+        flex-direction: column-reverse;
+    }
+    .cards{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    
+}
+
+@media only screen and (min-width: 500px) and (max-width:850px){
+    html{
+        font-size: 18px;
+        padding: 10px;
+    }
+    .cards{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+}
+
+@media only screen and (min-width: 850px){
+    html{
+        font-size: 20px;
+    }
+    .cards{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
